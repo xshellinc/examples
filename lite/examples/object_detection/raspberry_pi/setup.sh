@@ -6,6 +6,13 @@ else
   DATA_DIR="$1"
 fi
 
+# Install OpenCV dependencies
+sudo apt install -y \
+  libwebp6 libtiff5-dev libopenjp2-7 libopenexr23 \
+  libavcodec-dev libavformat-dev libswscale-dev \
+  liblapack-dev libatlas-base-dev \
+  libgtk-3-dev
+
 # Install Python dependencies
 python3 -m pip install pip --upgrade
 python3 -m pip install -r requirements.txt
